@@ -2,7 +2,9 @@ import express from 'express'
 const cors = require('cors');
 
 const app = express()
-app.use(cors());
+app.use(cors({
+  origin: 'null'
+}));
 
 app.get('/', (req, res) => {
   res.send('Hello World')
